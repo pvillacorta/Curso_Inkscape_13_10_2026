@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Pablo Villacorta Aylagas">
+
+<title>Iniciación a Inkscape</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7593ab93511ae6a052288a0edad15466.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-a46cc4728c527dc42959dd424dab631e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-7593ab93511ae6a052288a0edad15466.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+</head>
+
+<body class="quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">0. Introducción</a>
+  <ul class="collapse">
+  <li><a href="#objetivos-del-taller" id="toc-objetivos-del-taller" class="nav-link" data-scroll-target="#objetivos-del-taller">Objetivos del taller</a></li>
+  <li><a href="#imagen-vectorial-vs-imagen-de-mapa-de-bits" id="toc-imagen-vectorial-vs-imagen-de-mapa-de-bits" class="nav-link" data-scroll-target="#imagen-vectorial-vs-imagen-de-mapa-de-bits">Imagen vectorial vs imagen de mapa de bits</a>
+  <ul class="collapse">
+  <li><a href="#imagen-de-mapa-de-bits" id="toc-imagen-de-mapa-de-bits" class="nav-link" data-scroll-target="#imagen-de-mapa-de-bits">Imagen de mapa de bits</a></li>
+  <li><a href="#imagen-vectorial" id="toc-imagen-vectorial" class="nav-link" data-scroll-target="#imagen-vectorial">Imagen vectorial</a></li>
+  </ul></li>
+  <li><a href="#inkscape" id="toc-inkscape" class="nav-link" data-scroll-target="#inkscape">Inkscape</a>
+  <ul class="collapse">
+  <li><a href="#qué-es-inkscape" id="toc-qué-es-inkscape" class="nav-link" data-scroll-target="#qué-es-inkscape">¿Qué es Inkscape?</a></li>
+  <li><a href="#para-qué-podemos-usar-inkscape" id="toc-para-qué-podemos-usar-inkscape" class="nav-link" data-scroll-target="#para-qué-podemos-usar-inkscape">¿Para qué podemos usar Inkscape?</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#primeros-pasos" id="toc-primeros-pasos" class="nav-link" data-scroll-target="#primeros-pasos">1. Primeros pasos</a>
+  <ul class="collapse">
+  <li><a href="#la-interfaz" id="toc-la-interfaz" class="nav-link" data-scroll-target="#la-interfaz">La interfaz</a>
+  <ul class="collapse">
+  <li><a href="#una-regla-importante" id="toc-una-regla-importante" class="nav-link" data-scroll-target="#una-regla-importante">Una regla importante</a></li>
+  </ul></li>
+  <li><a href="#el-documento" id="toc-el-documento" class="nav-link" data-scroll-target="#el-documento">El documento</a></li>
+  <li><a href="#guías-y-cuadrícula" id="toc-guías-y-cuadrícula" class="nav-link" data-scroll-target="#guías-y-cuadrícula">Guías y cuadrícula</a></li>
+  <li><a href="#objetos" id="toc-objetos" class="nav-link" data-scroll-target="#objetos">Objetos</a></li>
+  </ul></li>
+  <li><a href="#creación-de-objetos" id="toc-creación-de-objetos" class="nav-link" data-scroll-target="#creación-de-objetos">2. Creación de objetos</a>
+  <ul class="collapse">
+  <li><a href="#formas-básicas" id="toc-formas-básicas" class="nav-link" data-scroll-target="#formas-básicas">Formas básicas</a></li>
+  <li><a href="#trayectos" id="toc-trayectos" class="nav-link" data-scroll-target="#trayectos">Trayectos</a></li>
+  <li><a href="#texto" id="toc-texto" class="nav-link" data-scroll-target="#texto">Texto</a></li>
+  </ul></li>
+  <li><a href="#modificación-de-objetos" id="toc-modificación-de-objetos" class="nav-link" data-scroll-target="#modificación-de-objetos">3. Modificación de objetos</a>
+  <ul class="collapse">
+  <li><a href="#selección-y-transformación" id="toc-selección-y-transformación" class="nav-link" data-scroll-target="#selección-y-transformación">Selección y transformación</a></li>
+  <li><a href="#edición-de-nodos" id="toc-edición-de-nodos" class="nav-link" data-scroll-target="#edición-de-nodos">Edición de nodos</a></li>
+  <li><a href="#relleno-y-borde" id="toc-relleno-y-borde" class="nav-link" data-scroll-target="#relleno-y-borde">Relleno y borde</a></li>
+  </ul></li>
+  <li><a href="#operaciones-sobre-objetos" id="toc-operaciones-sobre-objetos" class="nav-link" data-scroll-target="#operaciones-sobre-objetos">4. Operaciones sobre objetos</a>
+  <ul class="collapse">
+  <li><a href="#recorte-clip" id="toc-recorte-clip" class="nav-link" data-scroll-target="#recorte-clip">Recorte / Clip</a></li>
+  <li><a href="#máscara" id="toc-máscara" class="nav-link" data-scroll-target="#máscara">Máscara</a></li>
+  <li><a href="#filtros" id="toc-filtros" class="nav-link" data-scroll-target="#filtros">Filtros</a></li>
+  </ul></li>
+  <li><a href="#operaciones-sobre-subtipos-de-objetos" id="toc-operaciones-sobre-subtipos-de-objetos" class="nav-link" data-scroll-target="#operaciones-sobre-subtipos-de-objetos">5. Operaciones sobre subtipos de objetos</a>
+  <ul class="collapse">
+  <li><a href="#trayectos-1" id="toc-trayectos-1" class="nav-link" data-scroll-target="#trayectos-1">Trayectos</a>
+  <ul class="collapse">
+  <li><a href="#objeto-a-trayecto" id="toc-objeto-a-trayecto" class="nav-link" data-scroll-target="#objeto-a-trayecto">Objeto a trayecto</a></li>
+  <li><a href="#operaciones-booleanas" id="toc-operaciones-booleanas" class="nav-link" data-scroll-target="#operaciones-booleanas">Operaciones booleanas</a></li>
+  </ul></li>
+  <li><a href="#textos" id="toc-textos" class="nav-link" data-scroll-target="#textos">Textos</a>
+  <ul class="collapse">
+  <li><a href="#modificar-textos-sin-perder-su-propiedad-de-texto" id="toc-modificar-textos-sin-perder-su-propiedad-de-texto" class="nav-link" data-scroll-target="#modificar-textos-sin-perder-su-propiedad-de-texto">Modificar textos sin perder su propiedad de “texto”</a></li>
+  <li><a href="#convertir-texto-en-trayecto" id="toc-convertir-texto-en-trayecto" class="nav-link" data-scroll-target="#convertir-texto-en-trayecto">Convertir texto en trayecto</a></li>
+  </ul></li>
+  <li><a href="#elementos-de-mapa-de-bits" id="toc-elementos-de-mapa-de-bits" class="nav-link" data-scroll-target="#elementos-de-mapa-de-bits">Elementos de mapa de bits</a>
+  <ul class="collapse">
+  <li><a href="#convertir-imagen-a-vector" id="toc-convertir-imagen-a-vector" class="nav-link" data-scroll-target="#convertir-imagen-a-vector">Convertir imagen a vector</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#agrupardesagrupar-objetos" id="toc-agrupardesagrupar-objetos" class="nav-link" data-scroll-target="#agrupardesagrupar-objetos">6. Agrupar/Desagrupar objetos</a></li>
+  <li><a href="#capas-layers" id="toc-capas-layers" class="nav-link" data-scroll-target="#capas-layers">7. Capas (Layers)</a></li>
+  <li><a href="#importación-de-archivos" id="toc-importación-de-archivos" class="nav-link" data-scroll-target="#importación-de-archivos">8. Importación de archivos</a>
+  <ul class="collapse">
+  <li><a href="#sec-importacion-de-imagenes" id="toc-sec-importacion-de-imagenes" class="nav-link" data-scroll-target="#sec-importacion-de-imagenes">Importar imagen</a></li>
+  <li><a href="#importar-gráficos-vectoriales-en-svg-o-pdf" id="toc-importar-gráficos-vectoriales-en-svg-o-pdf" class="nav-link" data-scroll-target="#importar-gráficos-vectoriales-en-svg-o-pdf">Importar gráficos vectoriales (en SVG o PDF)</a></li>
+  </ul></li>
+  <li><a href="#exportación-y-guardado-de-archivos" id="toc-exportación-y-guardado-de-archivos" class="nav-link" data-scroll-target="#exportación-y-guardado-de-archivos">9. Exportación y guardado de archivos</a>
+  <ul class="collapse">
+  <li><a href="#guardar-tu-trabajo" id="toc-guardar-tu-trabajo" class="nav-link" data-scroll-target="#guardar-tu-trabajo">Guardar tu trabajo</a></li>
+  <li><a href="#exportar-a-otros-formatos" id="toc-exportar-a-otros-formatos" class="nav-link" data-scroll-target="#exportar-a-otros-formatos">Exportar a otros formatos</a></li>
+  </ul></li>
+  <li><a href="#casos-prácticos-reales" id="toc-casos-prácticos-reales" class="nav-link" data-scroll-target="#casos-prácticos-reales">10. Casos prácticos reales</a>
+  <ul class="collapse">
+  <li><a href="#generar-gráfico-con-matlab-y-retocarlo-en-inkscape" id="toc-generar-gráfico-con-matlab-y-retocarlo-en-inkscape" class="nav-link" data-scroll-target="#generar-gráfico-con-matlab-y-retocarlo-en-inkscape">Generar gráfico con MATLAB y retocarlo en Inkscape</a></li>
+  <li><a href="#diseñar-un-método-de-inserte-funcionalidad-y-representarlo-con-un-diagrama" id="toc-diseñar-un-método-de-inserte-funcionalidad-y-representarlo-con-un-diagrama" class="nav-link" data-scroll-target="#diseñar-un-método-de-inserte-funcionalidad-y-representarlo-con-un-diagrama">Diseñar un método de [inserte funcionalidad] y representarlo con un diagrama</a></li>
+  <li><a href="#crear-imágenes-arbitrariamente-complejas" id="toc-crear-imágenes-arbitrariamente-complejas" class="nav-link" data-scroll-target="#crear-imágenes-arbitrariamente-complejas">Crear imágenes arbitrariamente complejas</a></li>
+  </ul></li>
+  <li><a href="#otras-utilidades" id="toc-otras-utilidades" class="nav-link" data-scroll-target="#otras-utilidades">11. Otras utilidades</a></li>
+  <li><a href="#ejercicios-propuestos" id="toc-ejercicios-propuestos" class="nav-link" data-scroll-target="#ejercicios-propuestos">12. Ejercicios propuestos</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Iniciación a Inkscape</h1>
+<p class="subtitle lead">Diseño vectorial y aplicaciones prácticas</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>Pablo Villacorta Aylagas </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">13 de octubre de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introducción" class="level1">
+<h1>0. Introducción</h1>
+<p>Este taller introductorio a Inkscape pretende <strong>dar una visión general del programa y de sus posibilidades</strong>, y no tanto servir de guía completa de uso (que se puede encontrar en la <a href="https://inkscape-manuals.readthedocs.io">documentación oficial</a>).</p>
+<section id="objetivos-del-taller" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-del-taller">Objetivos del taller</h2>
+<ul>
+<li>Comprender los principios de la imagen vectorial y de la de mapa de bits, y las herramientas propias de cada una.</li>
+<li>Reconocer cuándo conviene usar Inkscape.</li>
+<li>Aprender a crear y modificar objetos en Inkscape.</li>
+<li>Aprender a generar figuras con lenguajes de programación y retocarlas en Inkscape.</li>
+</ul>
+</section>
+<section id="imagen-vectorial-vs-imagen-de-mapa-de-bits" class="level2">
+<h2 class="anchored" data-anchor-id="imagen-vectorial-vs-imagen-de-mapa-de-bits">Imagen vectorial vs imagen de mapa de bits</h2>
+<section id="imagen-de-mapa-de-bits" class="level3">
+<h3 class="anchored" data-anchor-id="imagen-de-mapa-de-bits">Imagen de mapa de bits</h3>
+<p>Una imagen de mapa de bits, <em>bitmap</em> o <em>raster</em> es una estructura de datos que define una cuadrícula de píxeles, cada uno de los cuales tiene un color específico. Los mapas de bits se utilizan para representar imágenes con detalles finos y colores precisos (fotografías, ilustraciones, etc.).</p>
+<div id="fig-mapa-de-bits" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mapa-de-bits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/mapa-de-bits.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mapa-de-bits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Imagen de mapa de bits: al hacer zoom, se puede ver la cuadrícula de píxeles.
+</figcaption>
+</figure>
+</div>
+<p>Los formatos de imagen de mapa de bits más comunes son JPEG, PNG, GIF, BMP, TIFF y WebP. Son adecuadas para fotografías y otras imágenes formadas por píxeles.</p>
+</section>
+<section id="imagen-vectorial" class="level3">
+<h3 class="anchored" data-anchor-id="imagen-vectorial">Imagen vectorial</h3>
+<p>Una imagen vectorial es un gráfico digital compuesto por formas geométricas (puntos, líneas, curvas, polígonos…) que se definen mediante fórmulas y ecuaciones matemáticas, en lugar de utilizar una cuadrícula de píxeles.</p>
+<p>Las imágenes vectoriales tienen las siguientes características:</p>
+<ul>
+<li>Ecalabilidad infinita: se pueden ampliar o reducir sin perder calidad.</li>
+<li>Independencia de elementos: cada figura o trazo dentro de la imagen es independiente y puede ser editado por separado.</li>
+<li>Archivos ligeros: generalmente son más pequeños que las imágenes de mapa de bits, lo que los hace más adecuados para la web y la impresión.</li>
+<li>Menor realismo fotográfico: no sirven para representar fotografías complejas o con muchos detalles de luz y sombra, ya que están pensadas para diseños limpios y definidos.</li>
+</ul>
+<div id="fig-vectorial" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vectorial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/vectorial.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vectorial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Imagen vectorial: el zoom no afecta a la calidad de debido a la manera en la que está definida la imagen.
+</figcaption>
+</figure>
+</div>
+<p>Son adecuadas para esquemas, logotipos, iconos, diagramas e ilustraciones técnicas. El contenido se puede modificar objeto por objeto.</p>
+<p>Los formatos de imagen vectorial más comunes son SVG, EPS, PDF, AI…</p>
+</section>
+</section>
+<section id="inkscape" class="level2">
+<h2 class="anchored" data-anchor-id="inkscape">Inkscape</h2>
+<section id="qué-es-inkscape" class="level3">
+<h3 class="anchored" data-anchor-id="qué-es-inkscape">¿Qué es Inkscape?</h3>
+<p><a href="https://inkscape.org/">Inkscape</a> es un editor de gráficos vectoriales gratuito y de código abierto. Permite crear ilustraciones, diagramas, iconos, logotipos y figuras técnicas, así como modificar dibujos existentes y preparar imágenes para documentos y presentaciones.</p>
+<p>A diferencia de un editor de imágenes tradicional, Inkscape trabaja principalmente con objetos vectoriales: formas, líneas, curvas y texto que se pueden editar de manera independiente.</p>
+<p>Puede considerarse la alternativa libre a Adobe Illustrator. La figura siguiente resume el panorama de aplicaciones de diseño, tanto de mapa de bits como vectoriales, y sitúa Inkscape entre ellas.</p>
+<div id="fig-comparativa-softwares" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-comparativa-softwares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/comparativa-softwares.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comparativa-softwares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Panorama de aplicaciones de diseño gráfico. Se divide en aplicaciones de diseño de mapa de bits y aplicaciones de diseño vectorial. Inkscape se sitúa en el área de las aplicaciones de diseño vectorial.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="para-qué-podemos-usar-inkscape" class="level3">
+<h3 class="anchored" data-anchor-id="para-qué-podemos-usar-inkscape">¿Para qué podemos usar Inkscape?</h3>
+<ul>
+<li>Dibujar diagramas, mapas mentales, etc.</li>
+<li>Preparar esquemas para informes y artículos científicos.</li>
+<li>Crear ilustraciones para presentaciones y pósteres.</li>
+<li>Diseñar iconos, infografías y logotipos.</li>
+<li>Anotar, recortar y combinar imágenes.</li>
+<li>Mejorar la presentación de gráficos generados mediante herramientas científicas o programación.</li>
+<li>En definitiva, para cualquier tipo de diseño gráfico que no requiera un alto nivel de realismo fotográfico. Podemos transformar en una imagen cualquier cosa que se nos ocurra</li>
+</ul>
+<p>… Convertir nuestras ideas en imágenes… <strong>¡Una imagen vale más que mil palabras!</strong></p>
+</section>
+</section>
+</section>
+<section id="primeros-pasos" class="level1">
+<h1>1. Primeros pasos</h1>
+<section id="la-interfaz" class="level2">
+<h2 class="anchored" data-anchor-id="la-interfaz">La interfaz</h2>
+<p>La interfaz (<a href="#fig-interfaz" class="quarto-xref">Figura&nbsp;4</a>) se organiza alrededor del lienzo, donde se encuentra el dibujo, y de distintas herramientas y paneles.</p>
+<ul>
+<li>Barra de herramientas lateral (izquierda): permite crear formas, dibujar trayectos, editar nodos, seleccionar objetos y añadir texto.</li>
+<li>Barra de controles superior: muestra las opciones de la herramienta activa o del objeto seleccionado.</li>
+<li>Lienzo: zona en la que construimos y organizamos el dibujo.</li>
+<li>Paneles de diálogo (derecha): proporcionan controles adicionales para propiedades como relleno, borde, capas y exportación.</li>
+</ul>
+<p>La disposición exacta puede variar según la versión y la configuración del programa.</p>
+<div id="fig-interfaz" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-interfaz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/interfaz.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-interfaz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Interfaz de Inkscape. Se muestra la barra de herramientas lateral, la barra de controles superior, el lienzo (con una cuadrícula y guías visibles) y los paneles de diálogo.
+</figcaption>
+</figure>
+</div>
+<section id="una-regla-importante" class="level3">
+<h3 class="anchored" data-anchor-id="una-regla-importante">Una regla importante</h3>
+<p>Los controles disponibles dependen del contexto. Por ejemplo, al seleccionar un rectángulo aparecen opciones propias de esa forma; al seleccionar texto aparecen controles tipográficos, y al utilizar la herramienta de nodos aparecen opciones para editar la geometría del trayecto.</p>
+<p>No es necesario memorizar todos los controles: basta con reconocer dónde están y saber cuándo buscarlos.</p>
+</section>
+</section>
+<section id="el-documento" class="level2">
+<h2 class="anchored" data-anchor-id="el-documento">El documento</h2>
+<p>Un documento de Inkscape contiene el dibujo y define la página sobre la que trabajamos. Antes de empezar, conviene comprobar sus dimensiones y unidades.</p>
+<p>En <strong>Archivo → Propiedades del documento</strong> podemos configurar, entre otras cosas, el tamaño de la página y sus unidades, la orientación de la página, la cuadrícula y las guías.</p>
+<div id="fig-document-properties" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-document-properties-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/document-properties.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-document-properties-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5: Propiedades del documento. Se puede configurar el tamaño de la página y sus unidades, la orientación, la cuadrícula y las guías, entre otras opciones.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="guías-y-cuadrícula" class="level2">
+<h2 class="anchored" data-anchor-id="guías-y-cuadrícula">Guías y cuadrícula</h2>
+<p>Las guías son referencias visuales que ayudan a alinear objetos. La cuadrícula facilita la colocación regular de elementos y puede utilizarse como referencia para construir dibujos geométricos. La <a href="#fig-interfaz" class="quarto-xref">Figura&nbsp;4</a> muestra las guías y la cuadrícula activas.</p>
+<p>El ajuste (snap) permite que objetos, nodos o puntos se acerquen y encajen con determinadas referencias, como guías, cuadrículas u otros objetos, según las opciones activadas. Se activa con el siguiente icono:</p>
+<div id="fig-snap" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-snap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/snap.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-snap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6: Icono de ajuste (snap).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="objetos" class="level2">
+<h2 class="anchored" data-anchor-id="objetos">Objetos</h2>
+<p>Los objetos son las entidades que se pueden crear y modificar en Inkscape. Esencialmente, se dividen en:</p>
+<ul>
+<li><strong>Formas básicas</strong>: rectángulos, elipses, polígonos y espirales.</li>
+<li><strong>Trayectos</strong>: secuencias de puntos conectados por líneas.</li>
+<li><strong>Texto</strong>: cadenas de caracteres que se pueden editar como cualquier otro objeto.</li>
+<li><strong>Elementos de mapa de bits</strong>: fotografías o gráficos importados, formados por píxeles en lugar de vectores.</li>
+</ul>
+</section>
+</section>
+<section id="creación-de-objetos" class="level1">
+<h1>2. Creación de objetos</h1>
+<p>La barra de herramientas lateral (<a href="#fig-creacion-modificacion" class="quarto-xref">Figura&nbsp;7</a>) permite crear y modificar objetos.</p>
+<div id="fig-creacion-modificacion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-creacion-modificacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/creacion-modificacion.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-creacion-modificacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7: Barra lateral de creación y modificación de objetos.
+</figcaption>
+</figure>
+</div>
+<section id="formas-básicas" class="level2">
+<h2 class="anchored" data-anchor-id="formas-básicas">Formas básicas</h2>
+<p>Inkscape permite crear varias formas básicas: rectángulos, elipses, polígonos y espirales.</p>
+<div id="fig-formas-basicas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-formas-basicas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/formas-basicas.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-formas-basicas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8: Creación de formas básicas.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="trayectos" class="level2">
+<h2 class="anchored" data-anchor-id="trayectos">Trayectos</h2>
+<p>También podemos crear trayectos, que son una secuencia de puntos conectados por líneas. En esencia, las formas básicas son trayectos cerrados.</p>
+<div id="fig-trayectos" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-trayectos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/trayectos.gif" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-trayectos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9: Creación y modificación de trayectos.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="texto" class="level2">
+<h2 class="anchored" data-anchor-id="texto">Texto</h2>
+<p>Es posible añadir texto, configurando su fuente, tamaño, color y alineación.</p>
+<div id="fig-texto" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-texto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/texto.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-texto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;10: Creación de texto.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="modificación-de-objetos" class="level1">
+<h1>3. Modificación de objetos</h1>
+<section id="selección-y-transformación" class="level2">
+<h2 class="anchored" data-anchor-id="selección-y-transformación">Selección y transformación</h2>
+<p>La herramienta de selección permite mover, escalar, girar y transformar objetos. Al seleccionar un elemento, podemos:</p>
+<ul>
+<li>Redimensionarlo y moverlo libremente (un click).
+<ul>
+<li>Si mientras mantenemos pulsado Ctrl, se redimensiona manteniendo la proporción y se desplaza únicamente en una dirección.</li>
+<li>Si mientras mantenemos pulsado Shift, se redimensiona manteniendo el centro.</li>
+</ul></li>
+<li>Rotarlo (dos clicks).
+<ul>
+<li>Si mientras mantenemos pulsado Ctrl, se rota en un ángulo múltiplo de 15°.</li>
+<li>Si mientras mantenemos pulsado Shift, se rota en torno a la esquina contraria en lugar del centro.</li>
+</ul></li>
+<li>Transformarlo (tres clicks).</li>
+</ul>
+<p>La barra de controles superior que aparece al seleccionar un objeto nos permite hacer acciones rápidas como rotar/voltear el objeto, o elegir su orden de apilamiento.</p>
+<div id="fig-barra-superior-seleccion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-barra-superior-seleccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/barra-superior-seleccion.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-barra-superior-seleccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;11: Barra de controles superior que aparece al seleccionar un objeto.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="edición-de-nodos" class="level2">
+<h2 class="anchored" data-anchor-id="edición-de-nodos">Edición de nodos</h2>
+<p>Los nodos definen la geometría de un trayecto. Con la herramienta de nodos podemos moverlos y modificar las curvas que conectan unos con otros.</p>
+<p>La barra de controles superior, en este caso permite unir nodos, separarlos, modificar su curvatura, etc.</p>
+<div id="fig-barra-superior-nodos" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-barra-superior-nodos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/barra-superior-nodos.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-barra-superior-nodos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;12: Barra de controles superior que aparece al usar la herramienta de edición de nodos.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="relleno-y-borde" class="level2">
+<h2 class="anchored" data-anchor-id="relleno-y-borde">Relleno y borde</h2>
+<p>El relleno y borde de un objeto se puede configurar, bien con los botones de la barra lateral izquierda (<a href="#fig-creacion-modificacion" class="quarto-xref">Figura&nbsp;7</a>), bien con los paneles de diálogo de la derecha, que hasta ahora no habíamos visto:</p>
+<div id="fig-dialogo-relleno-borde" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dialogo-relleno-borde-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/dialogo-relleno.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dialogo-relleno-borde-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;13: Panel de diálogo de relleno y borde. Con él es posible configurar el color de relleno, el color de borde, el grosor de borde, el tipo de borde, etc.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="operaciones-sobre-objetos" class="level1">
+<h1>4. Operaciones sobre objetos</h1>
+<section id="recorte-clip" class="level2">
+<h2 class="anchored" data-anchor-id="recorte-clip">Recorte / Clip</h2>
+<p>Un recorte o clip es una operación que permite seleccionar una parte de un objeto y eliminar el resto.</p>
+<p>Mientras que en otros programas existe una herramienta de recorte ‘’dedicada’’, en Inkscape esta operación se realiza mediante la intersección de dos objetos:</p>
+<ul>
+<li>El objeto que se quiere recortar, situado a mayor profundidad en la pila de objetos.</li>
+<li>El objeto que actúa como máscara, situado a menor profundidad.</li>
+</ul>
+<p>Para realizarlo, se seleccionan los dos objetos y se aplica el recorte con: <strong>Objeto → Recorte → Establecer Recorte</strong> (<em>Object → Clip → Set Clip</em>).</p>
+<div id="fig-recorte" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-recorte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/clip.gif" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-recorte-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;14: Ejemplo de recorte. Se seleccionan dos objetos y se aplica el recorte con: <strong>Object → Clip → Set Clip</strong>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="máscara" class="level2">
+<h2 class="anchored" data-anchor-id="máscara">Máscara</h2>
+<p>Una máscara es una operación conceptualmente similar a un recorte, pero que tiene en cuenta las características (color y transparencia) del objeto que actúa como máscara. Con los objetos de ejemplo anteriores, una máscara da el siguiente resultado:</p>
+<div id="fig-mascara" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mascara-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/mascara.gif" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mascara-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;15: Ejemplo de máscara. Se seleccionan dos objetos y se aplica la máscara con: <strong>Object → Mask → Set Mask</strong>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="filtros" class="level2">
+<h2 class="anchored" data-anchor-id="filtros">Filtros</h2>
+<p>Inkscape permite aplicar filtros a los objetos, como el desenfoque, el contorno, el efecto de brillo, etc. Para ello, se selecciona el objeto y se aplica el filtro con el menú <strong>Filtros</strong>.</p>
+<div id="fig-filtros" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-filtros-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/filtros.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-filtros-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;16: Ejemplos de filtros, aplicados desde el menú <strong>Filtros</strong>.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="operaciones-sobre-subtipos-de-objetos" class="level1">
+<h1>5. Operaciones sobre subtipos de objetos</h1>
+<section id="trayectos-1" class="level2">
+<h2 class="anchored" data-anchor-id="trayectos-1">Trayectos</h2>
+<section id="objeto-a-trayecto" class="level3">
+<h3 class="anchored" data-anchor-id="objeto-a-trayecto">Objeto a trayecto</h3>
+<p>Es posible convertir cualquier tipo de objeto (forma, texto, etc.) en un trayecto. Para ello, se selecciona el objeto y se aplica la conversión con: <strong>Trayecto → Objeto a trayecto</strong> (<em>Path → Object to Path</em>).</p>
+</section>
+<section id="operaciones-booleanas" class="level3">
+<h3 class="anchored" data-anchor-id="operaciones-booleanas">Operaciones booleanas</h3>
+<p>Una operación booleana es una operación que permite combinar dos objetos para crear un nuevo objeto. Las operaciones booleanas más comunes son la unión, la intersección y la diferencia. Para aplicarlas, se seleccionan las dos trayectorias y se recurre al menú <strong>Trayecto</strong>:</p>
+<div id="fig-operaciones-booleanas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-operaciones-booleanas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/operaciones-booleanas.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-operaciones-booleanas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;17: Ejemplos de operaciones booleanas, aplicadas desde el menú <strong>Trayecto</strong>.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="textos" class="level2">
+<h2 class="anchored" data-anchor-id="textos">Textos</h2>
+<section id="modificar-textos-sin-perder-su-propiedad-de-texto" class="level3">
+<h3 class="anchored" data-anchor-id="modificar-textos-sin-perder-su-propiedad-de-texto">Modificar textos sin perder su propiedad de “texto”</h3>
+<p>Es posible, una vez creado un texto, modificar aspectos como la fuente, el tamaño, el color, o el propio texto en cuestión (ver <a href="#fig-texto" class="quarto-xref">Figura&nbsp;10</a>).</p>
+</section>
+<section id="convertir-texto-en-trayecto" class="level3">
+<h3 class="anchored" data-anchor-id="convertir-texto-en-trayecto">Convertir texto en trayecto</h3>
+<p>Como ya hemos visto, es posible convertir cualquier tipo de objeto (entre ellos, texto) en un trayecto. De esta manera, podemos aplicar todo tipo de operaciones sobre él, modificar su forma, utilizar operaciones booleanas sobre él, etc., con el inconveniente de que <strong>ya no se puede editar como texto</strong>.</p>
+<div id="fig-texto-trayecto" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-texto-trayecto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/texto-a-trayecto.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-texto-trayecto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;18: Ejemplo de texto convertido en trayecto, y transformado con la herramienta de edición de nodos.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="elementos-de-mapa-de-bits" class="level2">
+<h2 class="anchored" data-anchor-id="elementos-de-mapa-de-bits">Elementos de mapa de bits</h2>
+<p>Aunque Inkscape es un programa de diseño vectorial, es posible importar imágenes de mapa de bits (ver <a href="#sec-importacion-de-imagenes" class="quarto-xref">Sección&nbsp;9.1</a>), con las que se puede trabajar como si se tratase de cualquier otro objeto.</p>
+<section id="convertir-imagen-a-vector" class="level3">
+<h3 class="anchored" data-anchor-id="convertir-imagen-a-vector">Convertir imagen a vector</h3>
+<p>Esta funcionalidad es extremadamente útil, y nos permite convertir una imagen de mapa de bits en un objeto vectorial, compuesto por trayectos. Es especialmente útil con imágenes simples como logotipos, iconos, tipografías, esquemas, etc., y no tanto con imágenes complejas como fotografías.</p>
+<p>Para convertir una imagen a vector, se puede ir a la opción <strong>Trayceto → Vectorizar mapa de bits</strong> o directamente en el de diálogo de la derecha, en la pestaña con el mismo nombre.</p>
+<div id="fig-imagen-a-vector" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-imagen-a-vector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/imagen-a-vector.gif" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-imagen-a-vector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;19: Ejemplo de imagen convertida a vector.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="agrupardesagrupar-objetos" class="level1">
+<h1>6. Agrupar/Desagrupar objetos</h1>
+<p>Es posible agrupar objetos para trabajar con ellos como un único objeto. Para ello, se seleccionan los objetos y se aplica la agrupación con: <strong>Objeto → Agrupar</strong> (<em>Object → Group</em>), o simplemente hacer click derecho y seleccionar “Agrupar”.</p>
+<p>Es posible desagrupar un objeto para trabajar con los objetos que lo componen por separado. Para ello, se selecciona el objeto y se aplica la desagrupación con: <strong>Objeto → Desagrupar</strong> (<em>Object → Ungroup</em>), o simplemente hacer click derecho y seleccionar “Desagrupar”.</p>
+<div id="fig-agrupar-desagrupar" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-agrupar-desagrupar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/agrupar-desagrupar.gif" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-agrupar-desagrupar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;20: Ejemplo de objeto desagrupado.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="capas-layers" class="level1">
+<h1>7. Capas (Layers)</h1>
+<p>En Inkscape, las capas te ayudan a organizar, ordenar y controlar los elementos de tu dibujo como si fueran hojas de papel transparentes. Son más o menos equivalentes a las capas de Photoshop o Illustrator.</p>
+<p>Para gestionar las capas, podemos utilizar el menú <strong>Objeto → Capas y Objetos</strong> (<em>Object → Layers and Objects</em>), o simplemente, hacer click en la pestaña <strong>Capas y Objetos</strong> en el menú de diálogo de la derecha.</p>
+<div id="fig-capas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-capas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/capas.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-capas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;21: Ejemplo de gestión de capas.
+</figcaption>
+</figure>
+</div>
+<p>Es posible realizar las operaciones habituales sobre las capas: crear, eliminar, cambiar su orden de apilamiento, etc.</p>
+<p>También es posible crear y visualizar grupos de capas (se muestran como carpetas), así como acceder a los objetos que los componen.</p>
+<p>Por último, es posible ocultar y mostrar las capas, así como bloquearlas (para que no se puedan editar).</p>
+</section>
+<section id="importación-de-archivos" class="level1">
+<h1>8. Importación de archivos</h1>
+<section id="sec-importacion-de-imagenes" class="level2">
+<h2 class="anchored" data-anchor-id="sec-importacion-de-imagenes">Importar imagen</h2>
+<p>Para importar una imagen, se puede recurrir al menú <strong>Archivo → Importar</strong> (<em>File → Import</em>), o bien arrastrar la imagen desde el explorador de archivos al lienzo.</p>
+<p>Una vez hecho esto, nos pedirá elegir el tipo de importación:</p>
+<ul>
+<li>Embedded: la imagen se importa como un objeto incrustado, lo que significa que si la imagen cambia en el archivo original, no lo hará en Inkscape.</li>
+<li>Linked: la imagen se importa como un objeto vinculado, lo que significa que si la imagen cambia en el archivo original, también lo hará en Inkscape.</li>
+</ul>
+<p>Normalmente se elegirá la opción <strong>Embedded</strong>, ya que no depende de la ruta del archivo original. El inconveniente es que la imagen de Inkscape ocupará más espacio en memoria porque habrá creado una copia de la imagen que hemos importado.</p>
+</section>
+<section id="importar-gráficos-vectoriales-en-svg-o-pdf" class="level2">
+<h2 class="anchored" data-anchor-id="importar-gráficos-vectoriales-en-svg-o-pdf">Importar gráficos vectoriales (en SVG o PDF)</h2>
+<p>Cuando importamos un fichero SVG o PDF dentro del lienzo, aparecen los siguientes cuadros de diálogo:</p>
+<div id="fig-importar-svg-pdf" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-importar-svg-pdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/importar-svg-pdf.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-importar-svg-pdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;22: Cuadros de diálogo de importación de gráficos vectoriales. (a) Cuando se importa un fichero SVG. (b) Cuando se importa un PDF.La opción preferible en este caso es “Cairo Import” para (1) incrustar el objeto en el propio lienzo y no en uno nuevo y (2) mantener la resolución original de la imagen.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="exportación-y-guardado-de-archivos" class="level1">
+<h1>9. Exportación y guardado de archivos</h1>
+<section id="guardar-tu-trabajo" class="level2">
+<h2 class="anchored" data-anchor-id="guardar-tu-trabajo">Guardar tu trabajo</h2>
+<p>Inkscape es un programa bastante estable, pero algunas acciones desafortunadas pueden provocar que se cierre inesperadamente. Para evitar perder tu trabajo, lo mejor es guardar tu dibujo con frecuencia. Por eso, es recomendable utilizar con regularidad el atajo de teclado <strong>Ctrl + S</strong>.</p>
+<p>Al guardar tu archivo por primera vez, asígnale un nombre y selecciona una de las siguientes extensiones:</p>
+<ul>
+<li><p><strong>.svg (Inkscape SVG)</strong><br>
+Guarda todos los datos del archivo, incluso aquellos útiles solo para la edición en Inkscape (no en otros editores).</p></li>
+<li><p><strong>.svg (SVG plano)</strong><br>
+Adecuado para compartir tu dibujo con otras personas que no usen Inkscape pero sí el formato SVG, por ejemplo, al visualizar una imagen SVG en una página web.</p></li>
+<li><p><strong>.svgz (SVG Inkscape/SVG plano comprimido)</strong><br>
+Guarda el archivo comprimido para ahorrar espacio en el disco.</p></li>
+</ul>
+</section>
+<section id="exportar-a-otros-formatos" class="level2">
+<h2 class="anchored" data-anchor-id="exportar-a-otros-formatos">Exportar a otros formatos</h2>
+<p>Es posible exportar el dibujo a otros formatos, como PNG, JPG, PDF, etc. Para ello, se puede recurrir al menú <strong>Archivo → Exportar</strong> (<em>File → Export</em>), o bien hacer click en el botón de la barra de herramientas lateral.</p>
+</section>
+</section>
+<section id="casos-prácticos-reales" class="level1">
+<h1>10. Casos prácticos reales</h1>
+<section id="generar-gráfico-con-matlab-y-retocarlo-en-inkscape" class="level2">
+<h2 class="anchored" data-anchor-id="generar-gráfico-con-matlab-y-retocarlo-en-inkscape">Generar gráfico con MATLAB y retocarlo en Inkscape</h2>
+</section>
+<section id="diseñar-un-método-de-inserte-funcionalidad-y-representarlo-con-un-diagrama" class="level2">
+<h2 class="anchored" data-anchor-id="diseñar-un-método-de-inserte-funcionalidad-y-representarlo-con-un-diagrama">Diseñar un método de [inserte funcionalidad] y representarlo con un diagrama</h2>
+</section>
+<section id="crear-imágenes-arbitrariamente-complejas" class="level2">
+<h2 class="anchored" data-anchor-id="crear-imágenes-arbitrariamente-complejas">Crear imágenes arbitrariamente complejas</h2>
+</section>
+</section>
+<section id="otras-utilidades" class="level1">
+<h1>11. Otras utilidades</h1>
+<ul>
+<li><a href="https://ezgif.com">Ezgif</a>: Convertir videos a GIFs.</li>
+<li><a href="https://pinetools.com/">PineTools</a>: Utilidades varias para imágenes, vídeos, texto, etc.</li>
+<li><a href="https://codesnap.dev/">CodeSnap</a>: Capturar pantallas de código.</li>
+</ul>
+</section>
+<section id="ejercicios-propuestos" class="level1">
+<h1>12. Ejercicios propuestos</h1>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
