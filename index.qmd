@@ -310,12 +310,21 @@ Es posible exportar el dibujo a otros formatos, como PNG, JPG, PDF, etc. Para el
 
 # 10. Casos prácticos reales
 
+Algunos ejemplos de de figuras creadas con Inkscape:
+
 ## Generar gráfico con MATLAB y retocarlo en Inkscape
+
+![Ejemplo de gráfico creado con MATLAB e insertado en Inkscape.](images/figura-matlab.svg){#fig-grafico-matlab}
 
 ## Diseñar un método de [inserte funcionalidad] y representarlo con un diagrama
 
+![Ejemplo 1 de diagrama creado con Inkscape. Representa un método de simular resonancia magnética sobre un objeto cilíndrico con múltiples GPUs.](images/koma-multi-gpu.svg){#fig-diagrama-1}
+
+![Ejemplo 2 de diagrama creado con Inkscape. Representa un método de corrección de movimiento respiratorio en imágenes de resonancia magnética del corazón.](images/figura-elisa.jpg){#fig-diagrama-2}
+
 ## Crear imágenes arbitrariamente complejas
 
+![Ejemplo de ilustración compleja creada con Inkscape.](images/coche.svg){#fig-coche}
 
 # 11. Otras utilidades
 
@@ -324,3 +333,7 @@ Es posible exportar el dibujo a otros formatos, como PNG, JPG, PDF, etc. Para el
 - [CodeSnap](https://codesnap.dev/): Capturar pantallas de código.
 
 # 12. Ejercicios propuestos
+
+![Ejercicio propuesto 1.](images/antena.jpg){#fig-antena}
+
+![Ejercicio propuesto 2.](images/tx-rx.jpg){#fig-tx-rx}

@@ -151,7 +151,7 @@
     "href": "index.html#importar-gráficos-vectoriales-en-svg-o-pdf",
     "title": "Iniciación a Inkscape",
     "section": "Importar gráficos vectoriales (en SVG o PDF)",
-    "text": "Importar gráficos vectoriales (en SVG o PDF)\nCuando importamos un fichero SVG o PDF dentro del lienzo, aparecen los siguientes cuadros de diálogo:\n\n\n\n\n\n\nFigura 22: Cuadros de diálogo de importación de gráficos vectoriales. (a) Cuando se importa un fichero SVG. (b) Cuando se importa un PDF.La opción preferible en este caso es “Cairo Import” para (1) incrustar el objeto en el propio lienzo y no en uno nuevo y (2) mantener la resolución original de la imagen."
+    "text": "Importar gráficos vectoriales (en SVG o PDF)\nCuando importamos un fichero SVG o PDF dentro del lienzo, aparecen los siguientes cuadros de diálogo:\n\n\n\n\n\n\nFigura 22: Cuadros de diálogo de importación de gráficos vectoriales. (a) Cuando se importa un fichero SVG. (b) Cuando se importa un PDF. La opción preferible en este caso es “Cairo Import” para (1) incrustar el objeto en el propio lienzo y no en uno nuevo y (2) mantener la resolución original de la imagen."
   },
   {
     "objectID": "index.html#guardar-tu-trabajo",
@@ -172,20 +172,20 @@
     "href": "index.html#generar-gráfico-con-matlab-y-retocarlo-en-inkscape",
     "title": "Iniciación a Inkscape",
     "section": "Generar gráfico con MATLAB y retocarlo en Inkscape",
-    "text": "Generar gráfico con MATLAB y retocarlo en Inkscape"
+    "text": "Generar gráfico con MATLAB y retocarlo en Inkscape\n\n\n\n\n\n\nFigura 23: Ejemplo de gráfico creado con MATLAB e insertado en Inkscape."
   },
   {
     "objectID": "index.html#diseñar-un-método-de-inserte-funcionalidad-y-representarlo-con-un-diagrama",
     "href": "index.html#diseñar-un-método-de-inserte-funcionalidad-y-representarlo-con-un-diagrama",
     "title": "Iniciación a Inkscape",
     "section": "Diseñar un método de [inserte funcionalidad] y representarlo con un diagrama",
-    "text": "Diseñar un método de [inserte funcionalidad] y representarlo con un diagrama"
+    "text": "Diseñar un método de [inserte funcionalidad] y representarlo con un diagrama\n\n\n\n\n\n\nFigura 24: Ejemplo 1 de diagrama creado con Inkscape. Representa un método de simular resonancia magnética sobre un objeto cilíndrico con múltiples GPUs.\n\n\n\n\n\n\n\n\n\nFigura 25: Ejemplo 2 de diagrama creado con Inkscape. Representa un método de corrección de movimiento respiratorio en imágenes de resonancia magnética del corazón."
   },
   {
     "objectID": "index.html#crear-imágenes-arbitrariamente-complejas",
     "href": "index.html#crear-imágenes-arbitrariamente-complejas",
     "title": "Iniciación a Inkscape",
     "section": "Crear imágenes arbitrariamente complejas",
-    "text": "Crear imágenes arbitrariamente complejas"
+    "text": "Crear imágenes arbitrariamente complejas\n\n\n\n\n\n\nFigura 26: Ejemplo de ilustración compleja creada con Inkscape."
   }
 ]
